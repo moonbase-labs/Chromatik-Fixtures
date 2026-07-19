@@ -1,0 +1,425 @@
+{
+  "label": "Dome Large Triangle",
+  "tags": [
+    "triangle",
+    "dome",
+    "dome-large"
+  ],
+  "parameters": {
+    "hostname": {
+      "type": "string",
+      "default": "127.0.0.1",
+      "label": "Host",
+      "description": "OPC receiver hostname or IP"
+    },
+    "port": {
+      "type": "int",
+      "default": 42069,
+      "min": 1,
+      "max": 65535,
+      "label": "Port",
+      "description": "OPC TCP/UDP port"
+    },
+    "opcChannel": {
+      "type": "int",
+      "default": 0,
+      "min": 0,
+      "max": 255,
+      "label": "OPC Channel",
+      "description": "OPC channel (0-255)"
+    },
+    "opcOffset": {
+      "type": "int",
+      "default": 0,
+      "min": 0,
+      "max": 65535,
+      "label": "OPC Offset",
+      "description": "Byte/pixel offset within the OPC channel"
+    },
+    "transport": {
+      "type": "string",
+      "default": "udp",
+      "label": "Transport",
+      "description": "OPC transport: udp or tcp"
+    }
+  },
+  "output": {
+    "protocol": "opc",
+    "host": "$hostname",
+    "port": "$port",
+    "channel": "$opcChannel",
+    "offset": "$opcOffset",
+    "transport": "$transport",
+    "byteOrder": "rgb"
+  },
+  "meta": {
+    "source": "telecortex-opc-sender/config/fixtures/dome-large.json",
+    "routing": "serpentine_right_top",
+    "spacing_x_mm": "62.5",
+    "spacing_y_mm": "62.5",
+    "led_count": "316",
+    "edge_mm": "1838.0"
+  },
+  "components": [
+    {
+      "type": "strip",
+      "id": "row0",
+      "tag": "row-0",
+      "x": 0.0,
+      "y": 718.75,
+      "z": 0,
+      "numPoints": 1,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row1",
+      "tag": "row-1",
+      "x": 0.0,
+      "y": 656.25,
+      "z": 0,
+      "numPoints": 1,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row2",
+      "tag": "row-2",
+      "x": 62.5,
+      "y": 593.75,
+      "z": 0,
+      "numPoints": 3,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row3",
+      "tag": "row-3",
+      "x": -62.5,
+      "y": 531.25,
+      "z": 0,
+      "numPoints": 3,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row4",
+      "tag": "row-4",
+      "x": 125.0,
+      "y": 468.75,
+      "z": 0,
+      "numPoints": 5,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row5",
+      "tag": "row-5",
+      "x": -125.0,
+      "y": 406.25,
+      "z": 0,
+      "numPoints": 5,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row6",
+      "tag": "row-6",
+      "x": 187.5,
+      "y": 343.75,
+      "z": 0,
+      "numPoints": 7,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row7",
+      "tag": "row-7",
+      "x": -187.5,
+      "y": 281.25,
+      "z": 0,
+      "numPoints": 7,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row8",
+      "tag": "row-8",
+      "x": 250.0,
+      "y": 218.75,
+      "z": 0,
+      "numPoints": 9,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row9",
+      "tag": "row-9",
+      "x": -312.5,
+      "y": 156.25,
+      "z": 0,
+      "numPoints": 11,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row10",
+      "tag": "row-10",
+      "x": 312.5,
+      "y": 93.75,
+      "z": 0,
+      "numPoints": 11,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row11",
+      "tag": "row-11",
+      "x": -375.0,
+      "y": 31.25,
+      "z": 0,
+      "numPoints": 13,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row12",
+      "tag": "row-12",
+      "x": 375.0,
+      "y": -31.25,
+      "z": 0,
+      "numPoints": 13,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row13",
+      "tag": "row-13",
+      "x": -437.5,
+      "y": -93.75,
+      "z": 0,
+      "numPoints": 15,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row14",
+      "tag": "row-14",
+      "x": 437.5,
+      "y": -156.25,
+      "z": 0,
+      "numPoints": 15,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row15",
+      "tag": "row-15",
+      "x": -500.0,
+      "y": -218.75,
+      "z": 0,
+      "numPoints": 17,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row16",
+      "tag": "row-16",
+      "x": 562.5,
+      "y": -281.25,
+      "z": 0,
+      "numPoints": 19,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row17",
+      "tag": "row-17",
+      "x": -562.5,
+      "y": -343.75,
+      "z": 0,
+      "numPoints": 19,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row18",
+      "tag": "row-18",
+      "x": 625.0,
+      "y": -406.25,
+      "z": 0,
+      "numPoints": 21,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row19",
+      "tag": "row-19",
+      "x": -625.0,
+      "y": -468.75,
+      "z": 0,
+      "numPoints": 21,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row20",
+      "tag": "row-20",
+      "x": 687.5,
+      "y": -531.25,
+      "z": 0,
+      "numPoints": 23,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row21",
+      "tag": "row-21",
+      "x": -750.0,
+      "y": -593.75,
+      "z": 0,
+      "numPoints": 25,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row22",
+      "tag": "row-22",
+      "x": 750.0,
+      "y": -656.25,
+      "z": 0,
+      "numPoints": 25,
+      "spacing": 62.5,
+      "direction": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "type": "strip",
+      "id": "row23",
+      "tag": "row-23",
+      "x": -812.5,
+      "y": -718.75,
+      "z": 0,
+      "numPoints": 27,
+      "spacing": 62.5,
+      "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  ]
+}
