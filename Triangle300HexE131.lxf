@@ -1,0 +1,62 @@
+{
+  "label": "Triangle 300 Hex E1.31",
+  "tags": [
+    "triangle",
+    "hex-grid",
+    "e131"
+  ],
+  "parameters": {
+    "hostname": {
+      "type": "string",
+      "default": "127.0.0.1",
+      "label": "Host",
+      "description": "Receiver IP address or hostname"
+    },
+    "universe": {
+      "type": "int",
+      "default": 1,
+      "min": 1,
+      "max": 63999,
+      "label": "Universe",
+      "description": "sACN/E1.31 universe (1-63999)"
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false,
+      "label": "Reverse",
+      "description": "Reverse the complete 300-pixel output order"
+    }
+  },
+  "output": {
+    "protocol": "sacn",
+    "host": "$hostname",
+    "universe": "$universe",
+    "byteOrder": "rgb",
+    "reverse": "$reverse"
+  },
+  "meta": {
+    "pixel_count": "300",
+    "row_lengths": "24,23,22,...,1",
+    "horizontal_spacing_mm": "47",
+    "vertical_spacing_mm": "40.70319397786862",
+    "wiring": "serpentine rows, bottom-to-top"
+  },
+  "components": [
+    {
+      "type": "strip",
+      "id": "rows",
+      "tag": "row",
+      "instances": 24,
+      "x": "-(23 - $instance) * 47 / 2 + ($instance % 2) * (23 - $instance) * 47",
+      "y": "$instance * 40.70319397786862",
+      "z": 0,
+      "numPoints": "24 - $instance",
+      "spacing": 47,
+      "direction": {
+        "x": "1 - 2 * ($instance % 2)",
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+}
