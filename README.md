@@ -29,7 +29,7 @@ Chromatik uses a fixture's file name as its type name, and a project stores that
 
 | Project | What it lays out |
 |---|---|
-| `TelecortexThreePanels` | BU, SLIU and SRIU, each its own panel fixture, with their controller IPs |
+| `TelecortexThreePanels` | BU, SLIU and SRIU, each its own panel fixture, addressed to the Pi that drives it |
 | `TelecortexDomeOG` | The `TelecortexDomeOG` fixture |
 | `TelecortexDomeUpperPanels` | The same 18 panels as `TelecortexDomeUpper`, each its own panel fixture |
 
@@ -49,6 +49,7 @@ The links go straight into `Fixtures/`, not a subfolder, so the type names match
 
 - Units are millimetres, and z is up.
 - Plan view: +x is east, +y is north. The door is the 5-way hub due south, opposite BU.
+- Each Raspberry Pi is addressed as `<balena device name>.local`, e.g. `lingering-brook.local`. Each has four outputs, OPC channels 0 to 3. quiet-hill has not been renamed yet, so it is still addressed by IP.
 - The original 12 panels keep their TeleCortex OG names (BU, BRD, SLIU, ...). Panels added since are named by compass point: BSE is the big south-east panel, SEN the small panel at the east hub on its north side.
 
 Chromatik's FREE licence only sends network output for models of 1,000 points or fewer. A single panel or `TelecortexThreePanels` fits; either dome needs a paid tier.

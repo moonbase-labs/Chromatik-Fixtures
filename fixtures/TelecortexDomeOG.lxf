@@ -8,7 +8,7 @@
   "parameters": {
     "hostLB": {
       "type": "string",
-      "default": "lingering-brook",
+      "default": "lingering-brook.local",
       "label": "Lingering Brook",
       "description": "OPC hostname/IP for lingering-brook"
     },
@@ -20,7 +20,7 @@
     },
     "hostCT": {
       "type": "string",
-      "default": "cold-thunder",
+      "default": "cold-thunder.local",
       "label": "Cold Thunder",
       "description": "OPC hostname/IP for cold-thunder"
     },

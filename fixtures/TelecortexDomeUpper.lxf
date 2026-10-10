@@ -78,7 +78,7 @@
     },
     "hostBU": {
       "type": "string",
-      "default": "192.168.1.48",
+      "default": "snowy-breakfast.local",
       "label": "BU Host",
       "description": "OPC hostname/IP for panel BU"
     },
@@ -92,7 +92,7 @@
     },
     "hostSLIU": {
       "type": "string",
-      "default": "192.168.1.69",
+      "default": "lingering-brook.local",
       "label": "SLIU Host",
       "description": "OPC hostname/IP for panel SLIU"
     },

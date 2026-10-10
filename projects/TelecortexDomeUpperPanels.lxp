@@ -271,7 +271,7 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "192.168.1.48",
+          "host": "snowy-breakfast.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
@@ -309,7 +309,7 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "192.168.1.69",
+          "host": "lingering-brook.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
