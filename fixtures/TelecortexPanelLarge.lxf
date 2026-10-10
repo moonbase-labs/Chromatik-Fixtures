@@ -1,5 +1,5 @@
 {
-    "label":  "Telecortex OG Large Triangle",
+    "label":  "Telecortex Panel Large",
     "tags":  [
                  "telecortex",
                  "dome",
@@ -46,7 +46,7 @@
                    "byteOrder":  "rgb"
                },
     "meta":  {
-                 "source_fixture":  "TelecortexOG.lxf",
+                 "source_fixture":  "TelecortexDomeOG.lxf",
                  "triangle_type":  "large",
                  "point_count":  "316",
                  "local_origin":  "first pixel in historical wiring order"

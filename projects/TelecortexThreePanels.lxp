@@ -79,7 +79,7 @@
     },
     "fixtures": [
       {
-        "jsonFixtureType": "SmallTriangle",
+        "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
           "host": "192.168.1.69",
           "port": 42069,
@@ -112,12 +112,12 @@
           "mute": false,
           "solo": false,
           "tags": "telecortex,og,small,sliu",
-          "fixtureType": "SmallTriangle"
+          "fixtureType": "TelecortexPanelSmall"
         },
         "children": {}
       },
       {
-        "jsonFixtureType": "LargeTriangle",
+        "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
           "host": "192.168.1.48",
           "port": 42069,
@@ -150,12 +150,12 @@
           "mute": false,
           "solo": false,
           "tags": "telecortex,og,large,bu",
-          "fixtureType": "LargeTriangle"
+          "fixtureType": "TelecortexPanelLarge"
         },
         "children": {}
       },
       {
-        "jsonFixtureType": "SmallTriangle",
+        "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
           "host": "192.168.1.105",
           "port": 42069,
@@ -188,7 +188,7 @@
           "mute": false,
           "solo": false,
           "tags": "telecortex,og,small,sriu",
-          "fixtureType": "SmallTriangle"
+          "fixtureType": "TelecortexPanelSmall"
         },
         "children": {}
       }

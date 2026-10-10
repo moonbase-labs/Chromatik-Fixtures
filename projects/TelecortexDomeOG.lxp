@@ -79,7 +79,7 @@
     },
     "fixtures": [
       {
-        "jsonFixtureType": "TelecortexOG",
+        "jsonFixtureType": "TelecortexDomeOG",
         "jsonParameters": {
           "hostLB": "lingering-brook",
           "hostQH": "quiet-hill",
@@ -115,7 +115,7 @@
           "mute": false,
           "solo": false,
           "tags": "",
-          "fixtureType": "TelecortexOG"
+          "fixtureType": "TelecortexDomeOG"
         },
         "children": {}
       }

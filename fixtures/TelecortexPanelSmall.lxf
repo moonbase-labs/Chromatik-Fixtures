@@ -1,5 +1,5 @@
 {
-    "label":  "Telecortex OG Small Triangle",
+    "label":  "Telecortex Panel Small",
     "tags":  [
                  "telecortex",
                  "dome",
@@ -46,7 +46,7 @@
                    "byteOrder":  "rgb"
                },
     "meta":  {
-                 "source_fixture":  "TelecortexOG.lxf",
+                 "source_fixture":  "TelecortexDomeOG.lxf",
                  "triangle_type":  "small",
                  "point_count":  "260",
                  "local_origin":  "first pixel in historical wiring order"
