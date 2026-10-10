@@ -5,6 +5,7 @@
 ```
 fixtures/   .lxf fixture definitions, one fixture per file
 projects/   .lxp Chromatik projects built from them
+scripts/    setup helpers
 ```
 
 ## Naming
@@ -36,7 +37,13 @@ Placing each panel as its own fixture is what lets the Panel Transforms effect i
 
 ## Install
 
-Copy `fixtures/*.lxf` straight into `~/Chromatik/Fixtures/`, not into a subfolder, so the type names match what the projects expect. Then open any project in `projects/`.
+```bash
+bun scripts/link-fixtures.ts
+```
+
+This symlinks every fixture into `~/Chromatik/Fixtures/`, so a `git pull` updates what Chromatik sees. Re-run it after a fixture is added, renamed or removed: it links new ones and clears links to ones that have gone. It never overwrites a file you have edited there, and is safe to run any number of times. On Windows, symlinks need Developer Mode turned on.
+
+The links go straight into `Fixtures/`, not a subfolder, so the type names match what the projects expect. Then open any project in `projects/`.
 
 ## Dome conventions
 
