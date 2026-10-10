@@ -5,6 +5,8 @@
 ```
 fixtures/   .lxf fixture definitions, one fixture per file
 projects/   .lxp Chromatik projects built from them
+mapper/     on-site tool that works out which Pi output feeds which panel
+mappings/   one mapping per site, written by the mapper
 scripts/    setup helpers
 ```
 
@@ -44,6 +46,28 @@ bun scripts/link-fixtures.ts
 This symlinks every fixture into `~/Chromatik/Fixtures/`, so a `git pull` updates what Chromatik sees. Re-run it after a fixture is added, renamed or removed: it links new ones and clears links to ones that have gone. It never overwrites a file you have edited there, and is safe to run any number of times. On Windows, symlinks need Developer Mode turned on.
 
 The links go straight into `Fixtures/`, not a subfolder, so the type names match what the projects expect. Then open any project in `projects/`.
+
+## Mapping the dome on site
+
+Panels go into the scaffold in any order and plug into whichever Pi output is nearest. Panels of a size are interchangeable, so what Chromatik needs is which output feeds each slot, and which of three ways round each large panel was mounted. A small panel only fits one way.
+
+```bash
+bun mapper/server.ts --site BlazingSwan2026
+```
+
+Turn Chromatik's output off first, since both send to the same Pis. Then open the printed address on a phone on the same network and stand under the dome:
+
+1. **Start mapping.** One output lights its panel dim white. Tap that panel on the map, or **Nothing lit** if the output is unused.
+2. **Tap the red corner.** The panel's corners light red, green and blue; red is where its data cable enters.
+3. **Confirm.** The map shows where green and blue should be. If they are somewhere else, the panel is wired differently from the others: save it flagged and check it later.
+4. **Check whole dome** once every output is done. Colour sweeps round the compass and gets brighter lower down, so a panel in the wrong place or turned wrong breaks the pattern. Redo it from the output list.
+5. **Build project** writes `projects/TelecortexDomeUpper<Site>.lxp`: every panel its own fixture, addressed to its output and turned as mounted.
+
+**Light everything** lights every output at once, each Pi in its own colour, to check connections before or after mapping: a dark panel isn't getting through, and a panel in the wrong colour is plugged into a different Pi than expected.
+
+Progress saves to `mappings/<Site>.json` after every tap, so restarting picks up where it left off. The Pis to try are listed in that file; edit it if one has a different host. The map can be drawn as seen from inside or from above.
+
+To try it without hardware, run `bun mapper/fake-pi.ts 42070 42071`, list the Pis in the mapping file as `127.0.0.1:42070` and `127.0.0.1:42071`, and pass that file with `--mapping`. `bun test` runs the mapper's tests.
 
 ## Dome conventions
 
