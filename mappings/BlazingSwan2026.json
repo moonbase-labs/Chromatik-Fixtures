@@ -1,0 +1,33 @@
+{
+  "site": "BlazingSwan2026",
+  "layout": "TelecortexDomeUpper",
+  "pis": [
+    {
+      "name": "lingering-brook",
+      "host": "lingering-brook.local",
+      "channels": 4
+    },
+    {
+      "name": "cold-thunder",
+      "host": "cold-thunder.local",
+      "channels": 4
+    },
+    {
+      "name": "snowy-breakfast",
+      "host": "snowy-breakfast.local",
+      "channels": 4
+    },
+    {
+      "name": "quiet-hill",
+      "host": "192.168.1.105",
+      "channels": 4
+    },
+    {
+      "name": "fierce-notebook",
+      "host": "4258cc5.local",
+      "channels": 4
+    }
+  ],
+  "outputs": {},
+  "updated": "2026-10-10T09:13:30.487Z"
+}
